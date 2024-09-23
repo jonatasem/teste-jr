@@ -16,8 +16,8 @@ export default function ConfirmDelete() {
                 <h2>Deletar tarefa</h2>
                 <p>Tem certeza que você deseja deletar essa tarefa?</p>
                 <div className='confirmButtons'>
-                    <button className='btnCancel' onClick={handleConfirmDelete}>Confirmar</button>
-                    <button className='btnDelete' onClick={() => setShowConfirm(false)}>Cancelar</button>
+                    <button className='btnCancel' onClick={() => setShowConfirm(false)}>Cancelar</button>
+                    <button className='btnDelete' onClick={handleConfirmDelete}>Excluir</button>
                 </div>
             </article>
         </section>

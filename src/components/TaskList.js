@@ -13,7 +13,11 @@ export default function TaskList() {
                 {todos.length === 0 ? <p>Nenhuma tarefa para hoje.</p> : todos.map(todo => (
                     <article className="cardTask" key={todo.id}>
                         <div>
-                            <input type="checkbox" checked={todo.completed} onChange={() => handleToggle(todo.id)} />
+                            <input 
+                                type="checkbox" 
+                                checked={todo.completed} 
+                                onChange={() => handleToggle(todo.id)} 
+                            />
                             <span>{todo.text}</span>
                         </div>
                         <button onClick={() => { setConfirmDeleteId(todo.id); setShowConfirm(true); }}>
@@ -27,7 +31,11 @@ export default function TaskList() {
                         {completedTodos.map(todo => (
                             <article className='cardTask' key={todo.id}>
                                 <div>
-                                    <input type="checkbox" checked={todo.completed} onChange={() => handleToggle(todo.id)} />
+                                    <input 
+                                        type="checkbox" 
+                                        checked={todo.completed} 
+                                        onChange={() => handleToggle(todo.id)} 
+                                    />
                                     <span className='listCompleted'>{todo.text}</span>
                                 </div>
                                 <button onClick={() => { setConfirmDeleteId(todo.id); setShowConfirm(true); }}>

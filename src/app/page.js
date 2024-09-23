@@ -2,7 +2,7 @@
 
 import Header from '../components/Header';
 import TaskList from '../components/TaskList';
-import ConfirmDelete from '../app/confirm-delete/page'; // Ajuste o caminho conforme necessário
+import ConfirmDelete from '../app/confirm-delete/page';
 import { useTodos } from '../context/TodoContext';
 
 export default function Home() {

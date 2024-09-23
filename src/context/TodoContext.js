@@ -26,7 +26,7 @@ export const TodoProvider = ({ children }) => {
         setCompletedTodos(storedCompletedTodos);
     }, []);
 
-    // Salvar tarefas no localStorage sempre que os estados mudarem
+    // Salvar tarefas no localStorage quando os estados mudarem
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
         localStorage.setItem('completedTodos', JSON.stringify(completedTodos));
@@ -46,11 +46,9 @@ export const TodoProvider = ({ children }) => {
         const todo = todos.find(t => t.id === id);
         if (todo) {
             if (todo.completed) {
-                // Se a tarefa estiver concluída, remova-a de completedTodos e adicione-a de volta a todos
                 setCompletedTodos(prev => prev.filter(t => t.id !== id));
                 setTodos(prev => [...prev, { ...todo, completed: false }]);
             } else {
-                // Se a tarefa não estiver concluída, remova-a de todos e adicione-a a completedTodos
                 setTodos(prev => prev.filter(t => t.id !== id));
                 setCompletedTodos(prev => [...prev, { ...todo, completed: true }]);
             }

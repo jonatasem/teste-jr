@@ -8,7 +8,6 @@
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
-  padding-bottom: 2.5rem;
 
   // Estilos para o cabeçalho
   .containerHeader {
@@ -102,6 +101,7 @@
     .newTaskBtn {
       background-image: linear-gradient(to right, #0796D3, #53C0F0);
       width: 450px;
+      max-width: 88vw;
       height: 51px;
       border-radius: 8px;
       outline: 0;
@@ -190,7 +190,7 @@
           background-image: linear-gradient(to right, #0796D3, #53C0F0, #0796D3);
           color: white;
         }
-      }      
+      }
     }
   }
 
@@ -249,33 +249,26 @@
   }
 
   // Media Queries para responsividade
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     .containerHeader {
       flex-wrap: wrap;
     }
   }
   
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     .containerHeader {
       padding: 1rem;
       margin: 0 1.5rem;
     }
   }
   
-  @media(max-width: 500px) {
-
+  @media (max-width: 500px) {
     .toDoList {
       margin: 1.5rem;
-
-    }
-
-    .containerButton {
-      width: 90%;
-      margin: 1.5rem auto;
     }
   }
 
-  @media(max-width:560px){
+  @media (max-width: 560px) {
     .formNewTask {
       background-color: white;
 
@@ -283,7 +276,7 @@
         box-shadow: none;
 
         .containerBtnTask {
-          flex-direction: column;
+          flex-direction: column-reverse;
 
           button {
             width: 100%;
@@ -299,18 +292,17 @@
         box-shadow: none;
 
         .confirmButtons {
-          flex-direction: column;
+          flex-direction: column-reverse;
 
           button {
             width: 100%;
           }
 
           .btnDelete {
-            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
           }
         }
       }
     }
-
   }
 }
