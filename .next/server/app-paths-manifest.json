@@ -1,4 +1,6 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/add-task/page": "app/add-task/page.js",
+  "/confirm-delete/page": "app/confirm-delete/page.js",
   "/page": "app/page.js"
 }
