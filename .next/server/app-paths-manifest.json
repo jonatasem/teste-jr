@@ -1,0 +1,4 @@
+{
+  "/add-task/page": "app/add-task/page.js",
+  "/page": "app/page.js"
+}
